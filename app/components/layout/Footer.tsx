@@ -1,5 +1,5 @@
 // footer component which contains contact information and links to social media profiles
-import ContactItem from "../ContactItem";
+import ContactItem from "../UI/ContactItem";
 import { FiMail, FiPhone } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
