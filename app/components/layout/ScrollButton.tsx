@@ -1,12 +1,13 @@
 "use client";
-// buttons to be on top of home page to scroll to next and previous sections of the page (can extend later to get
-// passed in an array of sections and each page passes it in and then the scroll buttons can be used in any page)
+// buttons to scroll between passed in sections 
 import { useEffect, useState } from "react";
 import {getNextSection,getPrevSection,scrollToSection,} from "@/app/lib/scroll";
-import { sections } from "@/app/lib/sections";
 
-export default function ScrollButtons() {
-  const [current, setCurrent] = useState("hero");
+type ScrollButtonsProps = {
+  sections: string[];// array of section ids in the order they appear on the page
+};
+export default function ScrollButtons({sections}: ScrollButtonsProps) {
+  const [current, setCurrent] = useState(sections[0]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,8 +29,8 @@ export default function ScrollButtons() {
     return () => observer.disconnect();
   }, []);
 
-  const next = getNextSection(current);
-  const prev = getPrevSection(current);
+  const next = getNextSection(current, sections);
+  const prev = getPrevSection(current, sections);
 
   return (
     <>

@@ -3,7 +3,7 @@ import SectionNav from "../../layout/SectionNav";
 
 export default function Hero(){
     return (
-            <section className="min-h-screen flex items-center px-8 md:px-24">
+            <section className="min-h-screen flex items-center px-8 md:px-24" id="hero">
                 <div className="max-w-4xl">
         
                 <p className="text-blue-400 text-sm tracking-widest uppercase mb-6">

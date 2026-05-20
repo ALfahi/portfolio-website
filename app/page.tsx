@@ -7,6 +7,14 @@ import Hero from "./components/home-page/sections/Hero";
 import Skills from "./components/home-page/sections/Skills";
 import ScrollButtons from "./components/layout/ScrollButton";
 
+const SECTIONS = [
+  "hero",
+  "about",
+  "skills",
+  "education",
+  "experience",
+  "contact",
+];
 
 export default function Home() {
   return (
@@ -18,7 +26,7 @@ export default function Home() {
       <Experience/>
       <CTA/>   
 
-      <ScrollButtons/>
+      <ScrollButtons sections={SECTIONS}/>
     </main>
   );
 }
