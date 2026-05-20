@@ -5,6 +5,7 @@ import Education from "./components/home-page/sections/Education";
 import Experience from "./components/home-page/sections/Experience";
 import Hero from "./components/home-page/sections/Hero";
 import Skills from "./components/home-page/sections/Skills";
+import ScrollButtons from "./components/layout/ScrollButton";
 
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
       <Education/>
       <Experience/>
       <CTA/>   
+
+      <ScrollButtons/>
     </main>
   );
 }

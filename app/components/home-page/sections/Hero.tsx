@@ -1,4 +1,4 @@
-import { scrollToSection } from "@/app/lib/scrollToSection";
+import { scrollToSection } from "@/app/lib/scroll";
 import SectionNav from "../../layout/SectionNav";
 
 export default function Hero(){

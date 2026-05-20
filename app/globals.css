@@ -10,4 +10,17 @@ body {
   color: var(--foreground);
   font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro Display",
     "Helvetica Neue", Arial;
+  scroll-snap-type: y mandatory;/* enable vertical snap scrolling */
+  overflow-y: scroll;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* each section snaps */
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }

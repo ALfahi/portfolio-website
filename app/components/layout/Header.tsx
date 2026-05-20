@@ -1,6 +1,6 @@
 // header which includes navigation to other sections/ pages of this website
 "use client";
-import { scrollToSection } from "@/app/lib/scrollToSection";
+import { scrollToSection } from "@/app/lib/scroll";
 import { motion } from "framer-motion";
 
 export default function Header() {

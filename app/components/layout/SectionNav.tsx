@@ -1,7 +1,7 @@
 // component used in hero section to easily access other sections of the page easily
 
 "use client";
-import { scrollToSection } from "@/app/lib/scrollToSection";
+import { scrollToSection } from "@/app/lib/scroll";
 
 export default function SectionNav() {
   return (
