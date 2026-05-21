@@ -1,5 +1,6 @@
 import { scrollToSection } from "@/app/lib/scroll";
 import SectionNav from "../../layout/SectionNav";
+import { HOME_PAGE_SECTIONS } from "@/app/const";
 
 export default function Hero(){
     return (
@@ -41,7 +42,7 @@ export default function Hero(){
                     </a>
         
                     <button
-                    onClick={()=>scrollToSection("about")}
+                    onClick={()=>scrollToSection(HOME_PAGE_SECTIONS[1])}// scroll to the first section that is not the hero section 
                     className="text-neutral-400 hover:text-white transition text-lg"
                     >
                     Learn more ↓
