@@ -35,7 +35,7 @@ export function initPhysics({ canvas, container}: InitParams) {
     raf = requestAnimationFrame(loop);
   };
 
-  // init
+  // init (no need to create mouse, walls, or pills here, as resizeScene will be called which will create them all)
   resize();
   loop();
 
