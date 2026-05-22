@@ -1,25 +1,26 @@
-import GlassSection from "../../UI/GlassSection";
+import Section from "@/app/components/layout/Section";
 
-export default function CTA(){
-    return(
-        <GlassSection id="contact" className="text-center">
+export default function CTA() {
+  return (
+    <Section id="contact" className="text-center">
 
-            <h2 className="text-5xl font-semibold">
-            Let’s build something great
-            </h2>
+      <h2 className="text-6xl md:text-7xl font-medium">
+        Let’s build something
+        <br />
+        meaningful together
+      </h2>
 
-            <p className="text-xl text-neutral-400 mt-8">
-            Open to internships, collaborations, and projects.
-            </p>
+      <p className="mt-10 text-lg text-neutral-500 max-w-xl mx-auto">
+        Open to internships, collaborations, and ambitious engineering work.
+      </p>
 
-            <a
-            href="#footer"
-            className="inline-block mt-12 text-blue-400 hover:text-blue-300 text-xl transition"
-            >
-            Contact Me →
-            </a>
+      <a
+        href="mailto:you@email.com"
+        className="inline-block mt-12 text-white border-b border-white/30 hover:border-white transition"
+      >
+        Get in touch →
+      </a>
 
-      </GlassSection>
-
-    )
+    </Section>
+  );
 }

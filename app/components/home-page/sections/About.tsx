@@ -1,48 +1,41 @@
-import GlassSection from "../../UI/GlassSection";
+import Section from "@/app/components/layout/Section";
 
-export default function About(){
-    return(
-        <GlassSection id="about">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+export default function About() {
+  return (
+    <Section id="about">
 
-                {/* IMAGE */}
-                <div className="flex justify-center md:justify-start">
-                <div className="w-80 h-80 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                    <img
-                    src="/LinkedIn-pfp.jpeg"
-                    alt="Profile"
-                    className="w-full h-full object-cover"
-                    />
-                </div>
-                </div>
+      <div className="grid md:grid-cols-12 gap-24 items-center">
 
-                {/* TEXT */}
-                <div className="space-y-8">
+        {/* IMAGE */}
+        <div className="md:col-span-6">
+          <img
+            src="/LinkedIn-pfp.jpeg"
+            className="rounded-2xl w-full max-w-lg"
+          />
+        </div>
 
-                <h2 className="text-5xl font-semibold">
-                    About Me
-                </h2>
+        {/* TEXT */}
+        <div className="md:col-span-6 space-y-10">
 
-                <p className="text-xl text-neutral-300 leading-relaxed">
-                    I am an aspiring software engineer who enjoys building systems,
-                    solving problems, and turning ideas into real-world applications.
-                </p>
+          <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+            About
+          </p>
 
-                <p className="text-xl text-neutral-400 leading-relaxed">
-                    I focus on full-stack development, clean UI design, and improving
-                    through hands-on engineering experience.
-                </p>
+          <h2 className="text-6xl md:text-7xl font-medium leading-[1.05]">
+            I care about
+            <br />
+            how systems feel
+          </h2>
 
-                <p className="text-sm text-neutral-500">
-                    Currently focused on{" "}
-                    <span className="text-blue-400">
-                    React • Next.js • System Design
-                    </span>
-                </p>
+          <p className="text-xl text-neutral-400 leading-relaxed">
+            I’m a computer science student building full-stack systems,
+            focusing on architecture, UX, and performance.
+          </p>
 
-                </div>
+        </div>
 
-            </div>
-        </GlassSection>
-    )
+      </div>
+
+    </Section>
+  );
 }

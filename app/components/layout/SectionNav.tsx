@@ -17,16 +17,10 @@ export default function SectionNav() {
         Skills
       </button>
 
-      <button onClick={() => scrollToSection("education")}
+      <button onClick={() => scrollToSection("career")}
         className="text-neutral-400 hover:text-blue-400 transition">
-        Education
+        career
       </button>
-
-      <button onClick={() => scrollToSection("experience")}
-        className="text-neutral-400 hover:text-blue-400 transition">
-        Experience
-      </button>
-
     </div>
   );
 }

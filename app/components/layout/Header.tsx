@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { scrollToSection } from "@/app/lib/scroll";
 import { usePathname, useRouter } from "next/navigation";
+import { HOME_PAGE_SECTIONS } from "@/app/const";
 
 export default function Header() {
   // we need to know if we are in home page or not
@@ -14,7 +15,7 @@ export default function Header() {
   function goHome(){// TO DO: move to seperate file
     // already on home page
     if (pathname === "/") {
-      scrollToSection("hero");
+      scrollToSection(HOME_PAGE_SECTIONS.hero);
       return;
     }
 
@@ -23,7 +24,7 @@ export default function Header() {
 
     // wait for page mount then scroll
     setTimeout(() => {
-      scrollToSection("hero");
+      scrollToSection(HOME_PAGE_SECTIONS.hero);
     }, 100);
   };
 

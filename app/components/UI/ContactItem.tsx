@@ -7,12 +7,7 @@ type ContactItemProps = {
   icon: ReactNode;
 };
 
-export default function ContactItem({
-  label,
-  value,
-  href,
-  icon,
-}: ContactItemProps) {
+export default function ContactItem({label,value,href,icon,}: ContactItemProps) {
   return (
     <a
       href={href}

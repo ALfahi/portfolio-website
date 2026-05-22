@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer  
     id="footer"
-    className="border-t border-neutral-800 mt-20 px-6 py-10"
+    className="border-t border-neutral-800 mt-20 px-6 py-10 backdrop-blur-lg"
     >
       <div className="max-w-5xl mx-auto flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         

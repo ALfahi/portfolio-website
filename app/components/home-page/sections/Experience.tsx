@@ -1,4 +1,4 @@
-import GlassSection from "@/app/components/UI/GlassSection";
+import GlassSection from "@/app/components/layout/GlassSection";
 import Timeline from "@/app/components/UI/Timeline";
 
 const workExperience = [

@@ -11,13 +11,13 @@ export function scrollToSection(id: string) {
 }
 
 // functiont to get next section for home page
-export function getNextSection(current: string, sections: string[]){
+export function getNextSection(current: string, sections: readonly string[]){
   const index = sections.indexOf(current);
   return sections[index + 1] || null;
 };
 
 // function to get previous section for home page
-export function getPrevSection(current: string, sections: string[]){
+export function getPrevSection(current: string, sections: readonly string[]){
   const index = sections.indexOf(current);
   return sections[index - 1] || null;
 };

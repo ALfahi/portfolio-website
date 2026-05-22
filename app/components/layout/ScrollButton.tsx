@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import {getNextSection,getPrevSection,scrollToSection,} from "@/app/lib/scroll";
 
 type ScrollButtonsProps = {
-  sections: string[];// array of section ids in the order they appear on the page
+  sections: readonly string[];// array of section ids in the order they appear on the page
 };
 export default function ScrollButtons({sections}: ScrollButtonsProps) {
   const [current, setCurrent] = useState(sections[0]);

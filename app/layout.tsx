@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
+import GlobalBackground from "./components/UI/GlobalBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,22 +20,17 @@ export const metadata: Metadata = {
   description: "Software Developer Personal Portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: {children: React.ReactNode;}) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    >
-      <body className="min-h-screen flex flex-col">
-        
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="min-h-screen flex flex-col bg-black text-white overflow-x-hidden">
+
+        {/******* global background ******* */}
+        <GlobalBackground/>
         <Header />
 
-        {/* we want to make sure that main content expands to fill the available space even it is empty*/}
-        <main className="flex-1">
+        {/* we want consistent margins across the site*/}
+        <main className="flex-1 w-[90%] mx-auto">
           {children}
         </main>
 

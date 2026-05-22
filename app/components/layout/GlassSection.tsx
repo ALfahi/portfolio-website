@@ -1,14 +1,13 @@
 import { ReactNode } from "react";
+// frosty background section with a glassmorphism effect (used as a container)
 
-export default function GlassSection({
-  id,
-  children,
-  className = "",
-}: {
+type GlassSectionProps = {
   id?: string;
   children: ReactNode;
   className?: string;
-}) {
+};
+
+export default function GlassSection({id,children,className = "",}: GlassSectionProps) {
   return (
     <section
       id={id}
@@ -16,7 +15,7 @@ export default function GlassSection({
     >
       <div
         className={`
-          w-full max-w-6xl
+          w-full max-w-7xl
           rounded-3xl
           border border-white/10
           bg-white/5

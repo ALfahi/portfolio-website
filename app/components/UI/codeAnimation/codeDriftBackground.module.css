@@ -1,0 +1,21 @@
+
+/* This file defines the CSS for the drifting code background animation. It includes a keyframe animation that moves code snippets from right 
+to left across the screen */
+@keyframes drift-left {
+    from {
+      transform: translateX(100vw);
+    }
+    to {
+      transform: translateX(-120%);
+    }
+  }
+  
+  .drift {
+    position: absolute;
+    left: 0;
+    animation: drift-left 30s linear infinite;
+    will-change: transform;
+  
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
