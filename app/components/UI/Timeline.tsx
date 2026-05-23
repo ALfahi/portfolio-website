@@ -1,18 +1,21 @@
 import { TimelineItem } from "@/app/types/timeline";
-type TimelineProps={
+type TimelineProps = {
   items: TimelineItem[];
-}
+};
 
 // timeline slider which displays items on the left or right of a
-//  central spine, alternating as you go down. 
-// On mobile it becomes a single column with a left-aligned spine 
+//  central spine, alternating as you go down.
+// On mobile it becomes a single column with a left-aligned spine
 // and dots for each item. The color of the dot is determined by the experience type (work, volunteer, education).
 export default function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative">
 
       {/* Desktop center spine */}
-      <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/15" />
+      <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-white/15" />
+
+      {/* Mobile spine) */}
+      <div className="md:hidden absolute left-0 top-0 bottom-0 w-1 bg-white/10" />
 
       <div className="space-y-20 md:space-y-24">
 
@@ -35,12 +38,9 @@ export default function Timeline({ items }: TimelineProps) {
                 className={`
                   hidden md:block
                   absolute left-1/2 top-6 -translate-x-1/2
-                  w-3 h-3 rounded-full ${color} z-10
+                  w-5 h-5 rounded-full ${color} z-10
                 `}
               />
-
-              {/* MOBILE DOT + LINE */}
-              <div className="md:hidden absolute left-0 top-2 w-px h-full bg-white/10" />
 
               <div
                 className={`
@@ -68,22 +68,22 @@ export default function Timeline({ items }: TimelineProps) {
                   />
 
                   {/* DATE */}
-                  <p className="text-xs tracking-[0.3em] uppercase text-neutral-600">
+                  <p className="text-label tracking-[0.3em] uppercase text-neutral-500">
                     {item.date}
                   </p>
 
+                  {/* spacing separator */}
+                  <div className="mt-3 mb-4 border-b border-white/80" />
+
                   {/* TITLE */}
-                  <h3 className="text-xl md:text-2xl font-medium mt-2 text-white">
+                  <h3 className="text-body md:text-2xl font-medium mt-2 text-white">
                     {item.title}
                   </h3>
 
                   {/* DESCRIPTION */}
-                  <p className="text-neutral-400 mt-3 leading-relaxed text-sm md:text-base">
+                  <p className="text-neutral-400 mt-3 leading-relaxed text-body-small">
                     {item.description}
                   </p>
-
-                  {/* spacing separator */}
-                  <div className="mt-8 border-b border-white/5" />
                 </div>
 
               </div>

@@ -15,11 +15,11 @@ export default function Hero({}: HeroProps) {
       <CodeDriftBackground />
 
       <div className="relative z-10 max-w-4xl">
-        <h1 className="text-6xl md:text-8xl font-semibold tracking-tight leading-tight">
+        <h1 className="text-display">
           Software Engineer
         </h1>
 
-        <p className="mt-10 text-xl md:text-2xl text-neutral-400 max-w-2xl leading-relaxed">
+        <p className="mt-10 text-body-large text-neutral-400">
           I build modern web applications with clarity, performance,
           and strong user experience.
         </p>
@@ -30,7 +30,7 @@ export default function Hero({}: HeroProps) {
             href="#"
             className="
               px-8 py-4 rounded-full
-              bg-blue-500 text-white font-medium text-lg
+              bg-blue-500 text-white font-medium text-2xl text-center
               hover:bg-blue-400 hover:scale-[1.03]
               transition
               shadow-[0_0_30px_rgba(59,130,246,0.25)]
@@ -41,7 +41,7 @@ export default function Hero({}: HeroProps) {
 
           <button
             onClick={() => scrollToSection(HOME_PAGE_SECTIONS.about)}
-            className="text-neutral-400 hover:text-white transition text-lg"
+            className="text-neutral-400 hover:text-white transition text-2xl"
           >
             Learn more ↓
           </button>

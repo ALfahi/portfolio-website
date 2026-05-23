@@ -16,30 +16,31 @@ export default function Skills() {
   return (
     <GlassSection id="skills">
 
-      <div className="flex justify-between items-end mb-16">
+      <h2 className="text-title">
+        Skills
+      </h2>
 
-        <h2 className="text-5xl md:text-6xl font-medium">
-          Skills
-        </h2>
+      <div className="flex justify-end items-end mb-16">
 
-        <div className="flex gap-6 text-sm text-neutral-500">
+        <div className="flex gap-6 text-body-small text-neutral-500">
           <button
             onClick={() => setMode("static")}
-            className={mode === "static" ? "text-white" : ""}
+            className={`hover:text-white hover:cursor-pointer transition ${mode === "static" ? "text-white" : ""}`}
           >
             Overview
           </button>
 
           <button
             onClick={() => setMode("interactive")}
-            className={mode === "interactive" ? "text-white" : ""}
+            className={`hover:text-white hover:cursor-pointer transition ${mode === "interactive" ? "text-white" : ""}`}
           >
             Explore
           </button>
           {mode === "interactive" && (
             <button
               onClick={handleReset}
-              className="px-4 py-2 rounded-xl border border-white/10 text-sm font-mono text-white/60 hover:text-white transition"
+              className="px-4 py-2 rounded-xl border border-white/10 text-body-small font-mono text-white/60 hover:text-white
+              hover:cursor-pointer transition"
             >
               Reset
             </button>

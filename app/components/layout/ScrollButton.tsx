@@ -36,16 +36,17 @@ export default function ScrollButtons({sections}: ScrollButtonsProps) {
     <>
       {/* ================= TOP BUTTON ================= */}
       {prev && (
-        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+        <div className="fixed top-30 left-1/2 -translate-x-1/2 z-50">
           <button
             onClick={() => scrollToSection(prev)}
             className="
               px-8 py-4
               rounded-full
-              bg-white/5 backdrop-blur-xl
+              bg-blue-500/20 backdrop-blur-xl
               border border-white/10
               text-white text-lg
-              hover:bg-white/10
+              hover:bg-blue-500/30
+              hover:scale-105
               transition
               shadow-[0_0_40px_rgba(255,255,255,0.05)]
             "
@@ -65,11 +66,11 @@ export default function ScrollButtons({sections}: ScrollButtonsProps) {
               rounded-full
               bg-blue-500/20 backdrop-blur-xl
               border border-blue-500/30
-              text-blue-400 text-lg font-medium
+              text-white text-lg font-medium
               hover:bg-blue-500/30
               hover:scale-105
               transition
-              shadow-[0_0_40px_rgba(59,130,246,0.25)]
+              shadow-[0_0_40px_rgba(255,255,255,0.05)]
             "
           >
             ↓ Next

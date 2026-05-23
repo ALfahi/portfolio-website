@@ -13,7 +13,7 @@ export default function SkillPills() {
             {group.items.map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-2 rounded-full text-sm font-mono border"
+                className="px-4 py-2 rounded-full text-label font-mono border"
                 style={{
                   background: group.color.bg,
                   borderColor: group.color.border,

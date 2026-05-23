@@ -13,7 +13,7 @@ export default function ContactItem({label,value,href,icon,}: ContactItemProps) 
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-3 text-sm md:text-base text-neutral-300 hover:text-white transition-all"
+      className="group flex items-center gap-3 text-nav text-neutral-300 hover:text-white transition-all"
     >
       <div className="text-neutral-500 group-hover:text-blue-400 transition-colors">
         {icon}

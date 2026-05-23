@@ -12,11 +12,11 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         
         <div>
-          <h2 className="text-white text-lg font-semibold tracking-tight">
+          <h2 className="text-white text-body-large font-semibold tracking-tight">
             Contact
           </h2>
 
-          <p className="text-neutral-500 mt-1 text-sm">
+          <p className="text-neutral-500 mt-1 text-body">
             Open to projects, internships, and collaborations.
           </p>
         </div>

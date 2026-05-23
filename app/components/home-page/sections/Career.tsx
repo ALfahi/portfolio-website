@@ -16,22 +16,26 @@ export default function Career() {
       {/* header */}
       <div className="flex justify-between items-end mb-16">
 
-        <h2 className="text-5xl md:text-6xl font-medium">
+        <h2 className="text-title">
           Career
         </h2>
 
         {/* toggle */}
-        <div className="flex gap-6 text-sm text-neutral-500">
+        <div className="flex gap-6 text-body-small text-neutral-500">
           <button
             onClick={() => setTab("experience")}
-            className={tab === "experience" ? "text-white" : ""}
+            className={`underline underline-offset-8 hover:text-white hover:decoration-white hover:cursor-pointer transition ${
+              tab === "experience" ? "text-white decoration-white" : "text-neutral-500 decoration-neutral-500"
+            }`}
           >
             Experience
           </button>
 
           <button
             onClick={() => setTab("education")}
-            className={tab === "education" ? "text-white" : ""}
+            className={`underline underline-offset-8 hover:text-white hover:decoration-white hover:cursor-pointer transition ${
+              tab === "education" ? "text-white decoration-white" : "text-neutral-500 decoration-neutral-500"
+            }`}
           >
             Education
           </button>

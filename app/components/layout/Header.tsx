@@ -56,7 +56,7 @@ export default function Header() {
           <div className="flex flex-col leading-none">
             <span
               className="
-                text-2xl md:text-3xl
+                text-title
                 font-black tracking-tight
                 text-white
                 transition-colors
@@ -68,7 +68,7 @@ export default function Header() {
 
             <span
               className="
-                text-[10px] md:text-xs
+                text-body-small
                 uppercase
                 tracking-[0.35em]
                 text-blue-400/80
@@ -80,17 +80,17 @@ export default function Header() {
         </button>
 
         {/* ───────── NAVIGATION ───────── */}
-        <nav className="flex items-center gap-2 md:gap-3">
+        <nav className="flex items-center gap-2 md:gap-3 text-nav">
           <button
             onClick={goHome}
             className="
               px-4 py-2.5
               rounded-xl
-              text-sm
               text-neutral-300
               hover:text-white
               hover:bg-white/5
               transition-all duration-200
+              hover: cursor-pointer
             "
           >
             Home
@@ -103,8 +103,9 @@ export default function Header() {
               rounded-xl
               bg-blue-500
               hover:bg-blue-400
+              hover: cursor-pointer
               text-white
-              text-sm font-medium
+              font-medium
               transition-all duration-200
               shadow-[0_0_30px_rgba(59,130,246,0.35)]
             "
@@ -118,11 +119,11 @@ export default function Header() {
               px-4 py-2.5
               rounded-xl
               border border-white/10
-              text-sm
               text-neutral-300
               hover:text-white
               hover:border-white/20
               hover:bg-white/5
+              hover: cursor-pointer
               transition-all duration-200
             "
           >
