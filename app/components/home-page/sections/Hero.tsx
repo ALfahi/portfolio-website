@@ -3,6 +3,7 @@ import { scrollToSection } from "@/app/lib/scroll";
 import SectionNav from "../../layout/SectionNav";
 import { HOME_PAGE_SECTIONS } from "@/app/const";
 import CodeDriftBackground from "../../UI/codeAnimation/CodeDriftBackground";
+import Link from "next/link";
 
 export type HeroProps = {};
 
@@ -26,8 +27,8 @@ export default function Hero({}: HeroProps) {
 
           {/* CTA */}
         <div className="mt-14 flex flex-col sm:flex-row gap-6 sm:items-center">
-          <a
-            href="#"
+          <Link
+            href="/projects"
             className="
               px-8 py-4 rounded-full
               bg-blue-500 text-white font-medium text-2xl text-center
@@ -37,7 +38,7 @@ export default function Hero({}: HeroProps) {
             "
           >
             View Projects
-          </a>
+          </Link>
 
           <button
             onClick={() => scrollToSection(HOME_PAGE_SECTIONS.about)}
