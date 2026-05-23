@@ -17,4 +17,5 @@ export const carouselButtonBaseClass =
   hover:scale-110
   transition-all duration-200
   text-white
+  pointer-events-auto
 `;

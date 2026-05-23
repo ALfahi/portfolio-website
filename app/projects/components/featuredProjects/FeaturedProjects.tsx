@@ -6,8 +6,14 @@ import { projects } from "@/app/data/sections/projects";
 import Carousel from "../UI/carousel/Carousel";
 import { carasoulVariants } from "../UI/carousel/variants";
 import { useIsMobile } from "@/app/hooks/UseIsMobile";
+import { PAGE_SIZE } from "../pagination/ProjectSection";
 
-export default function FeaturedProjects() {
+type Props = {
+    goToPage: (page: number, targetId?: string) => void;// function to go to a 
+    // specific page (pagination).
+  };
+
+export default function FeaturedProjects({goToPage}: Props) {
   const featured = projects.filter((p) => p.featured);
   const {isMobile} = useIsMobile();
   const [direction, setDirection] = useState(1);// which way should the text animate (1 for next i.e right, -1 for prev i.e left)
@@ -33,11 +39,11 @@ export default function FeaturedProjects() {
     setIndex((i) => (i - 1 + featured.length) % featured.length);
   }
 
-  function scrollToProject() {
-    document.getElementById(project.id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  function handleFeaturedClick(projectId: string) {
+    const index = projects.findIndex((p) => p.id === projectId);
+    const page = Math.floor(index / PAGE_SIZE);
+
+    goToPage(page, projectId);
   }
 
   return (
@@ -55,7 +61,7 @@ export default function FeaturedProjects() {
           externalControls={isMobile? false: true}
           size="lg"
           showGradient
-          onImageClick={scrollToProject}
+          onImageClick={()=>handleFeaturedClick(project.id)}
           onNext={handleNext}
           onPrev={handlePrev}
         />

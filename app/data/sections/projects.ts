@@ -1,6 +1,7 @@
 import { Project } from "@/app/projects/type";
 
 // placeholder project data
+// to do: make ids be numbers
 export const projects: Project[] = [
   {
     id: "ai-chat-platform",
@@ -82,7 +83,24 @@ export const projects: Project[] = [
   {
     id: "fitness-tracker",
     title: "Fitness Tracking App",
-    featured: false,
+    featured: true,
+    images: [
+      "/images/code.jpg",
+      "/images/code.jpg",
+      "/images/code.jpg",
+    ],
+    description:
+      "A mobile-first fitness tracking app with workout logging, progress analytics, and goal tracking features.",
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Firebase",
+    ],
+  },
+  {
+    id: "fitness-tracker2",
+    title: "Fitness Tracking App2",
+    featured: true,
     images: [
       "/images/code.jpg",
       "/images/code.jpg",
