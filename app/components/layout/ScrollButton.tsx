@@ -1,36 +1,16 @@
 "use client";
 // buttons to scroll between passed in sections 
-import { useEffect, useState } from "react";
 import {getNextSection,getPrevSection,scrollToSection,} from "@/app/lib/scroll";
+import { useActiveSection } from "@/app/hooks/UseActiveSection";
 
 type ScrollButtonsProps = {
   sections: readonly string[];// array of section ids in the order they appear on the page
 };
 export default function ScrollButtons({sections}: ScrollButtonsProps) {
-  const [current, setCurrent] = useState(sections[0]);
+  const active = useActiveSection(sections);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setCurrent(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const next = getNextSection(current, sections);
-  const prev = getPrevSection(current, sections);
+const next = getNextSection(active, sections);
+const prev = getPrevSection(active, sections);
 
   return (
     <>
@@ -46,6 +26,7 @@ export default function ScrollButtons({sections}: ScrollButtonsProps) {
               border border-white/10
               text-white text-lg
               hover:bg-blue-500/30
+              hover: cursor-pointer
               hover:scale-105
               transition
               shadow-[0_0_40px_rgba(255,255,255,0.05)]
@@ -68,6 +49,7 @@ export default function ScrollButtons({sections}: ScrollButtonsProps) {
               border border-blue-500/30
               text-white text-lg font-medium
               hover:bg-blue-500/30
+              hover: cursor-pointer
               hover:scale-105
               transition
               shadow-[0_0_40px_rgba(255,255,255,0.05)]
