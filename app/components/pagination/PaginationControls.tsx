@@ -24,7 +24,8 @@ export default function PaginationControls({page,totalPages, visiblePages,goToPa
           bg-white/10 hover:bg-white/20
           backdrop-blur
           transition-all duration-200
-          hover:scale-105
+          hover:scale-110
+          hover:cursor-pointer
           disabled:opacity-30
           disabled:hover:scale-100
           disabled:cursor-not-allowed
@@ -43,6 +44,7 @@ export default function PaginationControls({page,totalPages, visiblePages,goToPa
               w-10 h-10 rounded-full
               text-sm font-medium
               transition-all duration-200
+              hover:cursor-pointer
               ${
                 i === page
                   ? "bg-white text-black scale-105"
@@ -65,7 +67,8 @@ export default function PaginationControls({page,totalPages, visiblePages,goToPa
           bg-white/10 hover:bg-white/20
           backdrop-blur
           transition-all duration-200
-          hover:scale-105
+          hover:scale-110
+          hover:cursor-pointer
           disabled:opacity-30
           disabled:hover:scale-100
           disabled:cursor-not-allowed

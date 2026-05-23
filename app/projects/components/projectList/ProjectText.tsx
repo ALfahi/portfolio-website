@@ -22,7 +22,7 @@ export default function ProjectText({project,expanded,onToggle,}: Props) {
 
       <button
         onClick={onToggle}
-        className="mt-4 text-blue-400 hover:text-blue-300"
+        className="mt-4 text-blue-400 hover:text-blue-300 text-label hover:cursor-pointer"
       >
         {expanded ? "Show less" : "Read more"}
       </button>

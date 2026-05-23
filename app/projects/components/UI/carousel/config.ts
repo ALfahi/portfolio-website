@@ -15,6 +15,7 @@ export const carouselButtonBaseClass =
   backdrop-blur
   flex items-center justify-center
   hover:scale-110
+  hover:cursor-pointer
   transition-all duration-200
   text-white
   pointer-events-auto
