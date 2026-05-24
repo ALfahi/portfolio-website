@@ -13,11 +13,13 @@ type Props = {
   onPrev?: () => void;
   onImageClick?: () => void;
   externalControls?: boolean;// whether or not to show controls outside of image area, if false controls will be overlayed on image
+  externalTransitionKey?: string | number;// if parent wants to control the transiton key itself
   showGradient?: boolean;
   gradientClassName?: string;
 };
 
-export default function Carousel({images,size = "md",index, onNext, onPrev, onImageClick, externalControls = false, showGradient, gradientClassName,}: Props) {
+export default function Carousel({images,size = "md",index, onNext, onPrev, onImageClick, externalControls = false,externalTransitionKey,
+   showGradient, gradientClassName,}: Props) {
   const isControlled = index !== undefined;
 
   const [internalIndex, setInternalIndex] = useState(0);
@@ -53,7 +55,7 @@ export default function Carousel({images,size = "md",index, onNext, onPrev, onIm
   const image = (
     <CarouselImage
       src={images[currentIndex]}
-      transitionkey={transitionKey}
+      transitionkey={externalTransitionKey ?? transitionKey}// if an external transition key is provided, use that instead
       direction={direction}
       onClick={onImageClick}
       showGradient={showGradient}

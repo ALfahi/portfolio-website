@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { projects } from "@/app/data/sections/projects";
 import Carousel from "../UI/carousel/Carousel";
@@ -17,6 +17,8 @@ export default function FeaturedProjects({goToPage}: Props) {
   const featured = projects.filter((p) => p.featured);
   const {isMobile} = useIsMobile();
   const [direction, setDirection] = useState(1);// which way should the text animate (1 for next i.e right, -1 for prev i.e left)
+  const [transitionKey, setTransitionKey] = useState(() => crypto.randomUUID());// force image to transition
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const [index, setIndex] = useState(0);
 
@@ -29,22 +31,56 @@ export default function FeaturedProjects({goToPage}: Props) {
 
   if (!featured.length) return null;
 
-  function handleNext() {
+  const handleNext = useCallback(() => {
     setDirection(1);
+    setTransitionKey(crypto.randomUUID());
+  
     setIndex((i) => (i + 1) % featured.length);
-  }
+  }, [featured.length]);
 
-  function handlePrev() {
+  const handlePrev = useCallback(() => {
     setDirection(-1);
+    setTransitionKey(crypto.randomUUID());
+  
     setIndex((i) => (i - 1 + featured.length) % featured.length);
-  }
+  }, [featured.length]);
 
   function handleFeaturedClick(projectId: string) {
     const index = projects.findIndex((p) => p.id === projectId);
     const page = Math.floor(index / PAGE_SIZE);
+    resetTimer();
 
     goToPage(page, projectId);
   }
+
+  // function to reset the timer after any interaction is done
+  const resetTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+  
+    timerRef.current = setInterval(() => {
+      handleNext();
+    }, 4000);
+  }, [handleNext]);
+
+  function handleNextWithReset() {
+    handleNext();
+    resetTimer();
+  }
+  
+  function handlePrevWithReset() {
+    handlePrev();
+    resetTimer();
+  }
+
+  // start the timer
+  useEffect(() => {
+    resetTimer();
+  
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [resetTimer]);
+
 
   return (
     <section className="relative h-[85vh] flex flex-col md:flex-row items-center justify-center overflow-hidden">
@@ -62,8 +98,9 @@ export default function FeaturedProjects({goToPage}: Props) {
           size="lg"
           showGradient
           onImageClick={()=>handleFeaturedClick(project.id)}
-          onNext={handleNext}
-          onPrev={handlePrev}
+          onNext={handleNextWithReset}
+          onPrev={handlePrevWithReset}
+          externalTransitionKey={transitionKey}
         />
 
         {/* text overlay*/}
