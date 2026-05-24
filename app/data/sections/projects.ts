@@ -5,7 +5,9 @@ export const projects: Project[] = [
     id: "mood-rooms",
     title: "Mood Rooms",
     featured: true,
-    images: [],
+    images: ["/projects/mood-room/thumbnail.png", "/projects/mood-room/object-editor.png", "/projects/mood-room/add-object.png",
+      "/projects/mood-room/generate.png"
+    ],
     description: `
       An interactive 3D web application that allows users to design and customise their own virtual rooms using a wide range of objects, colours, and layouts.
       Users can also enter their current mood to generate a procedurally created room template that visually reflects that mood, providing a creative starting point for further customisation.
@@ -30,7 +32,8 @@ export const projects: Project[] = [
     id: "flatdm",
     title: "FlatDM",
     featured: true,
-    images: [],
+    images: ["/projects/flatdm/thumbnail.png", "/projects/flatdm/consultant-dashboard.png", "/projects/flatdm/listings.png",
+      "/projects/flatdm/listing-index.png", "/projects/flatdm/applications.png"],
     description: `
       A university group project developed in collaboration with FDM as industry consultants, focused on creating a modern flat-finding platform tailored to real client requirements.
       The application includes secure authentication with magic link login, role-based access for landlords, moderators, and applicants, as well as features such as property listings, reporting, reviews, direct messaging, and email notifications.
@@ -52,7 +55,8 @@ export const projects: Project[] = [
     id: "marathon-weather-app",
     title: "Marathon Weather App",
     featured: true,
-    images: [],
+    images: ["/projects/marathon-weather/thumbnail.png", "/projects/marathon-weather/edit-route.png", "/projects/marathon-weather/route-weather.png",
+      "/projects/marathon-weather/running-mode.png", "/projects/marathon-weather/route-list.png"],
     description: `
       A weather and route-planning application designed specifically for marathon runners and long-distance training.
       Users can create, edit, save, and export running routes while viewing detailed weather information across different checkpoints and times. The application supports layered weather visualisations including temperature, elevation, wind speed, and wind direction.
@@ -91,7 +95,7 @@ export const projects: Project[] = [
   {
     id: "personal-portfolio-v1",
     title: "Portfolio Website v1",
-    images: [],
+    images: ["/projects/website-v1/about-me.png", "/projects/website-v1/projects.png", "/projects/website-v1/menu.png"],
     description: `
       My first personal portfolio website built using the LAMP stack to learn the fundamentals of full-stack web development.
       The project included a custom authentication system, blog management functionality, and CRUD features allowing blog posts to be created and managed through an admin-only interface.
@@ -110,7 +114,9 @@ export const projects: Project[] = [
   {
     id: "horse-race-simulator",
     title: "Horse Race Simulator",
-    images: [],
+    images: ["/projects/horse-racing-simulator/thumbnail.png", "/projects/horse-racing-simulator/menu.png",
+       "/projects/horse-racing-simulator/empty-track.png", "/projects/horse-racing-simulator/add-horse.png", 
+       "/projects/horse-racing-simulator/race-track.png", "/projects/horse-racing-simulator/horse-textual.png"],
     description: `
       A Java-based horse racing simulator featuring both terminal and graphical user interface versions of the game.
       Players can simulate races, place bets, and manage different race conditions including terrain, weather, horse breeds, and item effects. The GUI version expands gameplay with additional mechanics and a dynamic betting system designed to make each race unpredictable and engaging.
@@ -150,7 +156,7 @@ export const projects: Project[] = [
     id: "connect-4-discord-bot",
     title: "Connect 4 Discord Bot",
     featured: true,
-    images: [],
+    images: ["/projects/connect4-discord/match.png", "/projects/connect4-discord/win-screen.png"],
     description: `
       A Discord bot built with Python that allows two users to play Connect 4 directly inside a Discord server using emoji-based interactions.
       The bot tracks gameplay state, validates moves, and displays the winning player's profile picture once a game is completed.
@@ -166,7 +172,8 @@ export const projects: Project[] = [
   {
     id: "nea-platformer",
     title: "2D Platformer NEA Project",
-    images: [],
+    images: ["/projects/nea-project/title-screen.jpeg", "/projects/nea-project/choose-player.jpeg", 
+      "/projects/nea-project/instructions.jpeg", "/projects/nea-project/level1.jpeg", "/projects/nea-project/player-jump.jpeg"],
     description: `
       A 2D platformer game developed in Python for my Computer Science NEA project.
       The game includes combat systems, enemy AI, animations, sound effects, custom level editing tools, save functionality, and player progression systems. Additional features include user authentication, leaderboards, and statistical graph visualisations.
