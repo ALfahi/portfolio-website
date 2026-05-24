@@ -11,7 +11,8 @@ type Props = {
 export function PrevButton({ size, icon, onClick }: Props) {
     return (
       <button className={`${carouselButtonBaseClass} ${sizeMap[size].btn}`} onClick={onClick}>
-        <ChevronLeft size={icon} />
+        <ChevronLeft size={icon} className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
+        />
       </button>
     );
   }
@@ -19,7 +20,7 @@ export function PrevButton({ size, icon, onClick }: Props) {
   export function NextButton({ size, icon, onClick }: Props) {
     return (
       <button className={`${carouselButtonBaseClass} ${sizeMap[size].btn}`} onClick={onClick}>
-        <ChevronRight size={icon} />
+        <ChevronRight size={icon}  className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]" />
       </button>
     );
   }

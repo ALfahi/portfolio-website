@@ -11,7 +11,7 @@ export const carouselButtonBaseClass =
   `
   flex-shrink-0
   rounded-full
-  bg-white/10 hover:bg-white/20
+  bg-white/20 hover:bg-white/30
   backdrop-blur
   flex items-center justify-center
   hover:scale-110
@@ -19,4 +19,5 @@ export const carouselButtonBaseClass =
   transition-all duration-200
   text-white
   pointer-events-auto
+  shadow-lg shadow-black/20
 `;

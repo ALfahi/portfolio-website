@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: {children: React.ReactNode;}) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased data-scroll-behavior="smooth"`}>
       <body className="min-h-screen flex flex-col bg-black text-white overflow-x-hidden">
 
         {/******* global background ******* */}
