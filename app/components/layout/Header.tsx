@@ -11,6 +11,9 @@ export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
 
+  const isHome = pathname === "/";
+  const isProjects = pathname.startsWith("/projects");
+
   // function to go home and scroll to the hero section
   function goHome(){// TO DO: move to seperate file
     // already on home page
@@ -81,34 +84,61 @@ export default function Header() {
 
         {/* ───────── NAVIGATION ───────── */}
         <nav className="flex items-center gap-2 md:gap-3 text-nav">
+
           <button
             onClick={goHome}
-            className="
+            className={`
               px-4 py-2.5
               rounded-xl
-              text-neutral-300
-              hover:text-white
-              hover:bg-white/5
               transition-all duration-200
-              hover: cursor-pointer
-            "
+              cursor-pointer
+              relative
+
+              ${
+                isHome
+                  ? `
+                    text-white
+                    bg-white/30
+                    border border-white/15
+                    shadow-inner
+                  `
+                  : `
+                    text-neutral-300
+                    hover:text-white
+                    hover:bg-white/5
+                    border border-transparent
+                  `
+              }
+            `}
           >
             Home
           </button>
 
           <Link
             href="/projects"
-            className="
+            className={`
               px-4 py-2.5
               rounded-xl
-              bg-blue-500
-              hover:bg-blue-400
-              hover: cursor-pointer
-              text-white
               font-medium
               transition-all duration-200
-              shadow-[0_0_30px_rgba(59,130,246,0.35)]
-            "
+              cursor-pointer
+
+              ${
+                isProjects
+                  ? `
+                    text-white
+                    bg-white/30
+                    border border-white/15
+                    shadow-inner
+                  `
+                  : `
+                    text-white
+                    bg-blue-500/90
+                    hover:bg-blue-400
+                    shadow-[0_10px_25px_rgba(59,130,246,0.25)]
+                  `
+              }
+            `}
           >
             Projects
           </Link>

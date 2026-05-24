@@ -50,7 +50,7 @@ export const projects: Project[] = [
 
   {
     id: "marathon-weather-app",
-    title: "Marathon Weather Tracker",
+    title: "Marathon Weather App",
     featured: true,
     images: [],
     description: `

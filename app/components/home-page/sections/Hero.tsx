@@ -17,12 +17,15 @@ export default function Hero({}: HeroProps) {
 
       <div className="relative z-10 max-w-4xl">
         <h1 className="text-display">
-          Software Engineer
+          Fahi Sabab Al
         </h1>
 
+        <p className="mt-6 text-title text-neutral-300">
+          Software Engineer • Undergrad CS Student
+        </p>
+
         <p className="mt-10 text-body-large text-neutral-400">
-          I build modern web applications with clarity, performance,
-          and strong user experience.
+          I build primarily web-based software, with a focus on performance, maintainability, structure, and user experience.
         </p>
 
           {/* CTA */}

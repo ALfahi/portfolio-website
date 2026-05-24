@@ -4,7 +4,7 @@ export const educationData = [
     {
       title: "Queen Mary University of London",
       date: "2024 - Present",
-      description: "BSc Computer Science",
+      description: "BSc Computer Science: N/A",
       experienceType: "education"  as TimelineItem["experienceType"],
     },
     {

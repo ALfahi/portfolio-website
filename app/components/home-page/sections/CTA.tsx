@@ -11,7 +11,7 @@ export default function CTA() {
       </h2>
 
       <p className="mt-10 text-body-large text-neutral-500 max-w-xl mx-auto">
-        Open to internships, collaborations, and ambitious engineering work.
+        Open to internships, collaborations, and software engineering opportunities.
       </p>
 
       <a
