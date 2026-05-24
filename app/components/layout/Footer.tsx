@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
 
       {/* COPYRIGHT SECTION */}
-      <div className="max-w-5xl mx-auto mt-10 pt-6 border-t border-neutral-800 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto mt-10 pt-6 border-t border-neutral-800 flex items-center justify-center">
         <p className="text-xs md:text-sm text-neutral-500">
           © 2026 Fahi Sabab Al. All rights reserved.
         </p>
