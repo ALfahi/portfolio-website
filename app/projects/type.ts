@@ -5,4 +5,5 @@ export type Project = {
     description: string;
     technologies: string[];
     featured?: boolean;
+    githubLink?: string;
   };

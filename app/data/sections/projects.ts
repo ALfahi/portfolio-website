@@ -1,117 +1,200 @@
 import { Project } from "@/app/projects/type";
 
-// placeholder project data
-// to do: make ids be numbers
 export const projects: Project[] = [
   {
-    id: "ai-chat-platform",
-    title: "AI Chat Platform",
+    id: "mood-rooms",
+    title: "Mood Rooms",
     featured: true,
-    images: [
-      "/LinkedIn-pfp.jpeg",
-      "/images/code.jpg",
-      "/images/code.jpg",
-    ],
-    description:
-      "A full-stack AI chat application with real-time streaming responses, user authentication, and conversation memory. Built to explore scalable AI UX patterns and modern streaming APIs.",
+    images: [],
+    description: `
+      An interactive 3D web application that allows users to design and customise their own virtual rooms using a wide range of objects, colours, and layouts.
+      Users can also enter their current mood to generate a procedurally created room template that visually reflects that mood, providing a creative starting point for further customisation.
+      Built collaboratively with Jabir, who contributed to development, while Romas handled the 3D modelling, environment design, and collision setup for interactive objects.
+    `,
     technologies: [
       "Next.js",
       "TypeScript",
-      "OpenAI API",
+      "React",
+      "React Three Fiber",
+      "Rapier Physics",
       "Tailwind CSS",
-      "Prisma",
-    ],
-  },
-
-  {
-    id: "portfolio-v2",
-    title: "Personal Portfolio v2",
-    featured: true,
-    images: [
-      "/images/code.jpg",
-      "/images/code.jpg",
-    ],
-    description:
-      "A high-performance developer portfolio with advanced scroll animations, Framer Motion transitions, and a custom-built project showcase system.",
-    technologies: [
-      "Next.js",
       "Framer Motion",
-      "Tailwind CSS",
-      "TypeScript",
+      "MongoDB",
+      "Hugging Face API",
+      "Blender"
     ],
+    githubLink: "https://github.com/jabirmb1/mood-room"
   },
 
   {
-    id: "task-management-app",
-    title: "Task Management App",
-    featured: false,
-    images: [
-      "/images/code.jpg",
-      "/images/code.jpg",
-      "/images/code.jpg",
-      "/images/code.jpg",
+    id: "flatdm",
+    title: "FlatDM",
+    featured: true,
+    images: [],
+    description: `
+      A university group project developed in collaboration with FDM as industry consultants, focused on creating a modern flat-finding platform tailored to real client requirements.
+      The application includes secure authentication with magic link login, role-based access for landlords, moderators, and applicants, as well as features such as property listings, reporting, reviews, direct messaging, and email notifications.
+      The project emphasised scalable full-stack architecture, usability, and collaborative agile development practices.
+    `,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "OpenRouteService",
+      "NextAuth.js"
     ],
-    description:
-      "A collaborative task management tool with drag-and-drop boards, real-time updates, and team-based project organization.",
+    githubLink: "https://github.com/joshualewis1717/flatdm"
+  },
+
+  {
+    id: "marathon-weather-app",
+    title: "Marathon Weather Tracker",
+    featured: true,
+    images: [],
+    description: `
+      A weather and route-planning application designed specifically for marathon runners and long-distance training.
+      Users can create, edit, save, and export running routes while viewing detailed weather information across different checkpoints and times. The application supports layered weather visualisations including temperature, elevation, wind speed, and wind direction.
+      Additional features include live route tracking, dynamic weather-based theming, checkpoint notifications, and detailed weather breakdowns throughout a run.
+    `,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "CSS Modules",
+      "IndexedDB",
+      "OpenWeather API",
+      "OpenRouteService",
+      "Leaflet",
+      "Lucide React"
+    ],
+    githubLink: "https://github.com/ALfahi/Marathon-Runner-Weather-App"
+  },
+
+  {
+    id: "personal-portfolio-v2",
+    title: "Portfolio Website v2",
+    images: [],
+    description: `
+      A redesigned personal portfolio website focused on modern UI design, smooth animations, and an improved overall user experience.
+      The site features responsive layouts, animated page transitions, interactive project showcases, and polished visual presentation aimed at creating a more professional and immersive portfolio experience.
+    `,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    githubLink: "https://github.com/ALfahi/portfolio-website"
+  },
+
+  {
+    id: "personal-portfolio-v1",
+    title: "Portfolio Website v1",
+    images: [],
+    description: `
+      My first personal portfolio website built using the LAMP stack to learn the fundamentals of full-stack web development.
+      The project included a custom authentication system, blog management functionality, and CRUD features allowing blog posts to be created and managed through an admin-only interface.
+      This project helped build foundational knowledge in backend development, databases, authentication, and web application structure.
+    `,
+    technologies: [
+      "PHP",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    githubLink: "https://github.com/ALfahi/Personal-Portfolio"
+  },
+
+  {
+    id: "horse-race-simulator",
+    title: "Horse Race Simulator",
+    images: [],
+    description: `
+      A Java-based horse racing simulator featuring both terminal and graphical user interface versions of the game.
+      Players can simulate races, place bets, and manage different race conditions including terrain, weather, horse breeds, and item effects. The GUI version expands gameplay with additional mechanics and a dynamic betting system designed to make each race unpredictable and engaging.
+    `,
+    technologies: [
+      "Java",
+      "Java Swing",
+      "AWT"
+    ],
+    githubLink: "https://github.com/ALfahi/HorseRaceSimulator"
+  },
+
+  {
+    id: "react-quiz-website",
+    title: "Quiz Platform",
+    images: [],
+    description: `
+      A full-stack quiz platform built while learning React and modern web development practices.
+      Users can create and play quizzes across multiple question types, while moderators are able to manage content and users through a dedicated dashboard. The application also includes authentication, email validation, and role-based permissions.
+      Although unfinished, the project served as valuable experience in building larger React applications with backend integration and user management systems.
+    `,
     technologies: [
       "React",
+      "Vite",
+      "JavaScript",
       "Node.js",
-      "Socket.io",
+      "Express.js",
       "MongoDB",
-      "Express",
+      "JWT Authentication",
+      "node-cron",
+      "Multer"
     ],
+    githubLink: "https://github.com/ALfahi/react-quiz-website"
   },
 
   {
-    id: "ecommerce-dashboard",
-    title: "E-commerce Analytics Dashboard",
-    featured: false,
-    images: [
-      "/images/code.jpg",
-      "/images/code.jpg",
-    ],
-    description:
-      "A data visualization dashboard for e-commerce metrics including sales trends, user behavior, and revenue tracking with interactive charts.",
+    id: "connect-4-discord-bot",
+    title: "Connect 4 Discord Bot",
+    featured: true,
+    images: [],
+    description: `
+      A Discord bot built with Python that allows two users to play Connect 4 directly inside a Discord server using emoji-based interactions.
+      The bot tracks gameplay state, validates moves, and displays the winning player's profile picture once a game is completed.
+    `,
     technologies: [
-      "Next.js",
-      "D3.js",
-      "TypeScript",
-      "PostgreSQL",
+      "Python",
+      "Discord.py",
+      "Discord API"
     ],
+    githubLink: "https://github.com/ALfahi/Connect-4-Discord-bot"
   },
 
   {
-    id: "fitness-tracker",
-    title: "Fitness Tracking App",
-    featured: true,
-    images: [
-      "/images/code.jpg",
-      "/images/code.jpg",
-      "/images/code.jpg",
-    ],
-    description:
-      "A mobile-first fitness tracking app with workout logging, progress analytics, and goal tracking features.",
+    id: "nea-platformer",
+    title: "2D Platformer NEA Project",
+    images: [],
+    description: `
+      A 2D platformer game developed in Python for my Computer Science NEA project.
+      The game includes combat systems, enemy AI, animations, sound effects, custom level editing tools, save functionality, and player progression systems. Additional features include user authentication, leaderboards, and statistical graph visualisations.
+      This project provided early experience with game development, object-oriented programming, and managing larger software projects.
+    `,
     technologies: [
-      "React Native",
-      "TypeScript",
-      "Firebase",
+      "Python",
+      "Pygame",
+      "pygame-menu",
+      "SQLite",
+      "Matplotlib"
     ],
+    githubLink: "https://github.com/ALfahi/2-D-platformer-NEA-Project-"
   },
+
   {
-    id: "fitness-tracker2",
-    title: "Fitness Tracking App2",
-    featured: true,
-    images: [
-      "/images/code.jpg",
-      "/images/code.jpg",
-      "/images/code.jpg",
-    ],
-    description:
-      "A mobile-first fitness tracking app with workout logging, progress analytics, and goal tracking features.",
+    id: "leetcode-problems",
+    title: "LeetCode Solutions",
+    images: ['/projects/leetcode/leetcode-github.png'],
+    description: `
+      A collection of algorithmic problem-solving solutions completed on LeetCode.
+      The repository contains solutions covering topics such as data structures, dynamic programming, graphs, recursion, sorting, searching, and general problem-solving techniques used in technical interviews.
+    `,
     technologies: [
-      "React Native",
-      "TypeScript",
-      "Firebase",
+      "Python",
+      "Algorithms",
+      "Data Structures"
     ],
-  },
+    githubLink: "https://github.com/ALfahi/Leetcode-problems"
+  }
 ];
