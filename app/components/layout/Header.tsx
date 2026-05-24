@@ -57,15 +57,7 @@ export default function Header() {
           className="group text-left cursor-pointer"
         >
           <div className="flex flex-col leading-none">
-            <span
-              className="
-                text-title
-                font-black tracking-tight
-                text-white
-                transition-colors
-                group-hover:text-blue-400
-              "
-            >
+            <span className="text-title font-bold tracking-tight text-white transition-colors group-hover:text-blue-400">
               FAHI
             </span>
 
