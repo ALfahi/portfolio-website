@@ -102,7 +102,7 @@ export default function Career() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <Timeline items={tab === "experience"? experienceData: educationData}/>
+            <Timeline items={tab === "experience"? experienceData: educationData} showLegend={true}/>
           </motion.div>
 
         </AnimatePresence>

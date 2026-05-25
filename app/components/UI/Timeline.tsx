@@ -1,15 +1,44 @@
 import { TimelineItem } from "@/app/types/timeline";
+
 type TimelineProps = {
   items: TimelineItem[];
+  showLegend?: boolean;
 };
+
+const LEGEND = [
+  { type: "work",      color: "bg-blue-500",   label: "Work" },
+  { type: "volunteer", color: "bg-purple-400",  label: "Volunteer" },
+  { type: "education", color: "bg-neutral-500", label: "Education" },
+] as const;
+
+type ExperienceType = typeof LEGEND[number]["type"];
+
+const colorMap = Object.fromEntries(
+  LEGEND.map(({ type, color }) => [type, color])
+) as Record<ExperienceType, string>;
+
 
 // timeline slider which displays items on the left or right of a
 //  central spine, alternating as you go down.
 // On mobile it becomes a single column with a left-aligned spine
 // and dots for each item. The color of the dot is determined by the experience type (work, volunteer, education).
-export default function Timeline({ items }: TimelineProps) {
+export default function Timeline({ items, showLegend=false }: TimelineProps) {
   return (
     <div className="relative">
+
+      {/* ── LEGEND ── */}
+      {showLegend && (
+        <div className="flex items-center gap-5 mb-15 md:mb-12 md:justify-end">
+          {LEGEND.map(({ type, color, label }) => (
+            <div key={type} className="flex items-center gap-2">
+              <span className={`w-2 h-2 rounded-full ${color} shrink-0`} />
+              <span className="text-label uppercase text-neutral-500">
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Desktop center spine */}
       <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-white/15" />
@@ -23,12 +52,7 @@ export default function Timeline({ items }: TimelineProps) {
           const isLeft = index % 2 === 0;
 
           // determine color based on experience type
-          const color =
-            item.experienceType === "work"
-              ? "bg-blue-500"
-              : item.experienceType === "volunteer"
-              ? "bg-purple-400"
-              : "bg-neutral-500";
+          const color = colorMap[item.experienceType as ExperienceType] ?? "bg-neutral-500";
 
           return (
             <div key={index} className="relative">
@@ -59,14 +83,14 @@ export default function Timeline({ items }: TimelineProps) {
                   `}
                 >
 
-                  {/* Mobile dot */}
+                  {/* MOBILE DOT */}
                   <div
                     className={`
-                      md:hidden absolute left-4 top-6
-                      -translate-x-1/2
+                      md:hidden absolute left-4 top-2 -translate-x-1/2
                       w-2.5 h-2.5 rounded-full ${color}
                     `}
                   />
+
                   {/* DATE */}
                   <p className="text-label tracking-[0.3em] uppercase text-neutral-500">
                     {item.date}
