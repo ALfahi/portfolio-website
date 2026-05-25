@@ -42,7 +42,7 @@ export const SKILL_GROUPS = [
       "Framer Motion",
       "Rapier",
       "Pygame",
-      "Blender",
+      "Figma"
     ],
   },
 ] as const;

@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description: `
       An interactive 3D web application that allows users to design and customise their own virtual rooms using a wide range of objects, colours, and layouts.
       Users can also enter their current mood to generate a procedurally created room template that visually reflects that mood, providing a creative starting point for further customisation.
-      Built collaboratively with Jabir, who contributed to development, while Romas handled the 3D modelling, environment design, and collision setup for interactive objects.
+      Built collaboratively with Jabir, who contributed to development, while Romas handled the 3D modelling, environment design, and collision setup for the interactive objects.
     `,
     technologies: [
       "Next.js",
@@ -44,9 +44,10 @@ export const projects: Project[] = [
       "applications.png"
     ]),
     description: `
-      A university group project developed in collaboration with FDM as industry consultants, focused on creating a modern flat-finding platform tailored to real client requirements.
-      The application includes secure authentication with magic link login, role-based access for landlords, moderators, and applicants, as well as features such as property listings, reporting, reviews, direct messaging, and email notifications.
-      The project emphasised scalable full-stack architecture, usability, and collaborative agile development practices.
+      A university group project developed in collaboration with FDM Group as industry consultants, focused on creating a modern flat-finding platform tailored to real client requirements.
+      The application includes secure authentication with magic-link login, role-based access for landlords, moderators, and applicants, as well as features such as property listings, reporting, reviews, direct messaging, and email notifications.
+      The project emphasised scalable full-stack architecture, usability, and collaborative agile development practices. In particular, it addressed common issues in modern flat-finding platforms, such as poor communication between tenants and landlords and discovering incompatible roommates too late in the renting process.
+
     `,
     technologies: [
       "Next.js",
@@ -73,8 +74,8 @@ export const projects: Project[] = [
     ]),
     description: `
       A weather and route-planning application designed specifically for marathon runners and long-distance training.
-      Users can create, edit, save, and export running routes while viewing detailed weather information across different checkpoints and times. The application supports layered weather visualisations including temperature, elevation, wind speed, and wind direction.
-      Additional features include live route tracking, dynamic weather-based theming, checkpoint notifications, and detailed weather breakdowns throughout a run.
+      Users can create, edit, save, and export running routes while viewing detailed weather information across different checkpoints and times. The application supports layered weather visualisations of the etire routes including temperature, rainfall, elevation, wind speed, and wind direction.
+      Additional features include live route tracking, dynamic weather-based theming, live checkpoint notifications, and detailed weather breakdowns throughout a run.
     `,
     technologies: [
       "Next.js",
@@ -233,7 +234,7 @@ export const projects: Project[] = [
     ]),
     description: `
       A collection of algorithmic problem-solving solutions completed on LeetCode.
-      The repository contains solutions covering topics such as data structures, dynamic programming, graphs, recursion, sorting, searching, and general problem-solving techniques used in technical interviews.
+      The repository contains solutions covering topics such as data structures, dynamic programming, recursion, sorting, searching, and general problem-solving techniques used in technical interviews.
     `,
     technologies: [
       "Python",
