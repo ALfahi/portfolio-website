@@ -37,3 +37,9 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+```
+
+## TODO/ Planned upgrades
+- add in lazy loading for non thumbnail images, and for images not in current page
+- potentially make the url reflect the current page from pagination
