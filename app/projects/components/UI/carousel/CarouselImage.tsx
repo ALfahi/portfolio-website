@@ -10,9 +10,12 @@ type Props = {
   onClick?: () => void;
   showGradient?: boolean;
   gradientClassName?: string;
+  objectFit?: "object-cover" | "object-contain"
 };
 
-export default function CarouselImage({src, transitionkey, direction,onClick,showGradient = false,gradientClassName = defaultGradient,}: Props) {
+export default function CarouselImage({src, transitionkey, direction,onClick,showGradient = false,gradientClassName = defaultGradient,
+  objectFit="object-contain"
+}: Props) {
 
   const isClickable = typeof onClick === "function";// if onclick was passed in, indicate it
   return (
@@ -28,7 +31,7 @@ export default function CarouselImage({src, transitionkey, direction,onClick,sho
           exit="exit"
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className={[
-            "absolute inset-0 w-full h-full object-cover select-none pointer-events-auto transition-transform duration-300",
+            `absolute inset-0 w-full h-full ${objectFit} select-none pointer-events-auto transition-transform duration-300`,
             isClickable
               ? "cursor-pointer hover:scale-[1.05]"
               : "cursor-default",

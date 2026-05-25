@@ -16,10 +16,11 @@ type Props = {
   externalTransitionKey?: string | number;// if parent wants to control the transiton key itself
   showGradient?: boolean;
   gradientClassName?: string;
+  objectFit?: "object-cover" | "object-contain"// how should the image behave
 };
 
 export default function Carousel({images,size = "md",index, onNext, onPrev, onImageClick, externalControls = false,externalTransitionKey,
-   showGradient, gradientClassName,}: Props) {
+   showGradient, gradientClassName, objectFit}: Props) {
   const isControlled = index !== undefined;
 
   const [internalIndex, setInternalIndex] = useState(0);
@@ -60,6 +61,7 @@ export default function Carousel({images,size = "md",index, onNext, onPrev, onIm
       onClick={onImageClick}
       showGradient={showGradient}
       gradientClassName={gradientClassName}
+      objectFit={objectFit}
     />
   );
 

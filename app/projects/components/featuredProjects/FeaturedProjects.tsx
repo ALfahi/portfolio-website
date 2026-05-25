@@ -101,6 +101,7 @@ export default function FeaturedProjects({goToPage}: Props) {
           onNext={handleNextWithReset}
           onPrev={handlePrevWithReset}
           externalTransitionKey={transitionKey}
+          objectFit="object-cover"
         />
 
         {/* text overlay*/}
