@@ -15,21 +15,21 @@ export default function Header() {
   const isProjects = pathname.startsWith("/projects");
 
   // function to go home and scroll to the hero section
-  function goHome(){// TO DO: move to seperate file
-    // already on home page
+  function goHome() {
+    // TO DO: move to seperate file
     if (pathname === "/") {
       scrollToSection(HOME_PAGE_SECTIONS.hero);
       return;
     }
 
-    // go home first
+     // go home first
     router.push("/");
 
-    // wait for page mount then scroll
+     // wait for page mount then scroll
     setTimeout(() => {
       scrollToSection(HOME_PAGE_SECTIONS.hero);
     }, 100);
-  };
+  }
 
   return (
     <motion.header
@@ -40,23 +40,24 @@ export default function Header() {
     >
       <div
         className="
-          max-w-7xl mx-auto
-          h-20 md:h-24
-          px-6 md:px-10
-          rounded-2xl
-          border border-white/10
-          bg-black/45
-          backdrop-blur-2xl
-          shadow-[0_10px_40px_rgba(0,0,0,0.35)]
-          flex items-center justify-between
-        "
+        max-w-7xl mx-auto
+        h-30
+        px-5 sm:px-6 md:px-10
+        rounded-2xl
+        border border-white/10
+        bg-black/45
+        backdrop-blur-2xl
+        shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+        flex items-center justify-between
+        overflow-hidden
+      "
       >
         {/* ───────── BRANDING ───────── */}
         <button
           onClick={goHome}
           className="group text-left cursor-pointer"
         >
-          <div className="flex flex-col leading-none">
+          <div className="flex flex-col leading-none min-w-0">
             <span className="text-title font-bold tracking-tight text-white transition-colors group-hover:text-blue-400">
               FAHI
             </span>
@@ -65,7 +66,7 @@ export default function Header() {
               className="
                 text-body-small
                 uppercase
-                tracking-[0.35em]
+                tracking-[0.15em] md:tracking-[0.2em]
                 text-blue-400/80
               "
             >
@@ -75,12 +76,12 @@ export default function Header() {
         </button>
 
         {/* ───────── NAVIGATION ───────── */}
-        <nav className="flex items-center gap-2 md:gap-3 text-nav">
+        <nav className="flex items-center gap-1 md:gap-3 text-nav flex-shrink-0">
 
           <button
             onClick={goHome}
             className={`
-              px-4 py-2.5
+              px-2 md:px-4 py-2 md:py-2.5
               rounded-xl
               transition-all duration-200
               cursor-pointer
@@ -109,7 +110,7 @@ export default function Header() {
           <Link
             href="/projects"
             className={`
-              px-4 py-2.5
+              px-2 md:px-4 py-2 md:py-2.5
               rounded-xl
               font-medium
               transition-all duration-200
@@ -138,14 +139,14 @@ export default function Header() {
           <button
             onClick={() => scrollToSection("footer")}
             className="
-              px-4 py-2.5
+              px-2 md:px-4 py-2 md:py-2.5
               rounded-xl
               border border-white/10
               text-neutral-300
               hover:text-white
               hover:border-white/20
               hover:bg-white/5
-              hover: cursor-pointer
+              hover:cursor-pointer
               transition-all duration-200
             "
           >

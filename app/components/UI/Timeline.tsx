@@ -15,7 +15,7 @@ export default function Timeline({ items }: TimelineProps) {
       <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-white/15" />
 
       {/* Mobile spine) */}
-      <div className="md:hidden absolute left-0 top-0 bottom-0 w-1 bg-white/10" />
+      <div className="md:hidden absolute left-4 top-0 bottom-0 w-1 bg-white/10" />
 
       <div className="space-y-20 md:space-y-24">
 
@@ -54,19 +54,19 @@ export default function Timeline({ items }: TimelineProps) {
                   className={`
                     relative
                     md:w-[45%]
-                    pl-6 md:pl-0
+                    pl-8 md:pl-0
                     ${isLeft ? "md:pr-10 md:text-right" : "md:pl-10 md:text-left"}
                   `}
                 >
 
-                  {/* MOBILE DOT */}
+                  {/* Mobile dot */}
                   <div
                     className={`
-                      md:hidden absolute left-[-6px] top-2
+                      md:hidden absolute left-4 top-6
+                      -translate-x-1/2
                       w-2.5 h-2.5 rounded-full ${color}
                     `}
                   />
-
                   {/* DATE */}
                   <p className="text-label tracking-[0.3em] uppercase text-neutral-500">
                     {item.date}
