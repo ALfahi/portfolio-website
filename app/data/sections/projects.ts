@@ -92,7 +92,12 @@ export const projects: Project[] = [
   {
     id: "personal-portfolio-v2",
     title: "Portfolio Website v2",
-    images: [],
+    images: buildImagePaths("/projects/website-v2", [
+      "thumbnail.png",
+      "about.png",
+      "featured-projects.png",
+      "projects.png"
+    ]),
     description: `
       A redesigned personal portfolio website focused on modern UI design, smooth animations, and an improved overall user experience.
       The site features responsive layouts, animated page transitions, interactive project showcases, and polished visual presentation aimed at creating a more professional and immersive portfolio experience.
